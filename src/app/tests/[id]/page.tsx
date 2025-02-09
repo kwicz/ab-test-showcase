@@ -35,9 +35,7 @@ export default function TestDetailsPage() {
         {isVariantApplied ? 'Return to Control' : 'Apply Variant'}
       </button>
 
-      {test.controlComponent && (
-        <test.controlComponent variant={isVariantApplied} />
-      )}
+      {test.controlComponent && <test.controlComponent />}
     </div>
   );
 }

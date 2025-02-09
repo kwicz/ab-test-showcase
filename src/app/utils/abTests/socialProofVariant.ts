@@ -1,3 +1,6 @@
+/* eslint-disable */
+/* tslint:disable */
+// @ts-nocheck
 export function applySocialProofVariant() {
   (function () {
     function T(t, e, n) {

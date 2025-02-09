@@ -14,9 +14,13 @@ export type ABTest = {
   date: string;
   controlComponent?: React.ReactNode;
   buildCode?: () => void;
-  variants: {
-    name: string;
-    description: string;
-    screenshot?: string;
-  }[];
+  activeVariant: string;
+  variants: Variant[];
+  // variants: {
+  //   id: string;
+  //   name: string;
+  //   description: string;
+  //   screenshot?: string;
+  //   variantComponent: React.ReactNode;
+  // }[];
 };

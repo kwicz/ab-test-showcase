@@ -3,7 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-export default function SocialProofControl({ variant }: { variant: boolean }) {
+export default function SocialProofControl() {
   return (
     <section
       id='socialProofControl'
