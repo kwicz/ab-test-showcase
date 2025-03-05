@@ -24,18 +24,47 @@ export default function TestDetailsPage() {
   };
 
   return (
-    <div className='p-8'>
-      <h1>{test.name}</h1>
-      <p>{test.description}</p>
+    <div className='max-w-4xl mx-auto p-8'>
+      <div className='mb-8'>
+        <h1 className='text-3xl mb-6'>{test.name}</h1>
+        <div className='space-y-4 text-lg'>
+          <p>
+            <span className='font-semibold text-navy'>Description:</span>{' '}
+            {test.description}
+          </p>
+          <p>
+            <span className='font-semibold text-navy'>Hypothesis:</span>{' '}
+            {test.hypothesis}
+          </p>
+          <p>
+            <span className='font-semibold text-navy'>Methodology:</span>{' '}
+            {test.methodology}
+          </p>
+          <p>
+            <span className='font-semibold text-navy'>Results:</span>{' '}
+            {test.results}
+          </p>
+          <p>
+            <span className='font-semibold text-navy'>Launch Date:</span>{' '}
+            {test.date}
+          </p>
+        </div>
+      </div>
 
-      <button
-        onClick={toggleVariant}
-        className='p-2 bg-blue-500 text-white rounded mb-4'
-      >
-        {isVariantApplied ? 'Return to Control' : 'Apply Variant'}
-      </button>
+      <div className='mb-8'>
+        <button
+          onClick={toggleVariant}
+          className='px-6 py-3 rounded-lg font-semibold'
+        >
+          {isVariantApplied ? 'Return to Control' : 'Apply Variant'}
+        </button>
+      </div>
 
-      {test.controlComponent && <test.controlComponent />}
+      {test.controlComponent && (
+        <div className='w-[calc(100%+48px)] -mx-6 border-2 border-navy p-6 bg-white shadow-lg'>
+          <test.controlComponent />
+        </div>
+      )}
     </div>
   );
 }

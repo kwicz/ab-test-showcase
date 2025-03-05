@@ -1,29 +1,7 @@
 import SocialProofControl from '../components/tests/SocialProof/SocialProofControl';
-import { applySocialProofVariant } from '../utils/abTests/socialProofVariant';
+import { applySocialProofVariant } from '../utils/abTests/applySocialProofVariant';
 
 export const abTests = [
-  {
-    id: 'homepage-button',
-    name: 'Homepage Button Color Test',
-    description: 'Testing the impact of button color on conversion rates.',
-    hypothesis: 'Changing the button from blue to green will increase signups.',
-    methodology:
-      '50% of users saw a blue button, 50% saw a green button. We tracked conversion rates for 30 days.',
-    results: 'Green button led to a 15% increase in signups.',
-    date: '2024-01-15',
-    variants: [
-      {
-        name: 'Blue Button (Control)',
-        description: 'Original button with blue background.',
-        screenshot: '/images/blue-button.png',
-      },
-      {
-        name: 'Green Button (Variant)',
-        description: 'New button with green background.',
-        screenshot: '/images/green-button.png',
-      },
-    ],
-  },
   {
     id: 'social-proof',
     name: 'Ingredients Page Social Proof Test',
@@ -45,6 +23,22 @@ export const abTests = [
         name: 'Dynamic Reviews and Testimonials (Variant)',
         description: 'Reviews based on the type of review and videos.',
         screenshot: '/images/green-button.png',
+      },
+    ],
+  },
+  {
+    id: 'two-page-form',
+    name: 'Registration Form Length Test',
+    description: 'In Development - Testing form length optimization',
+    hypothesis: 'In Development',
+    methodology: 'Test plan in development',
+    results: 'Pending',
+    date: '2024-TBD',
+    variants: [
+      {
+        name: 'In Development',
+        description: 'Test variants being designed',
+        screenshot: '',
       },
     ],
   },
